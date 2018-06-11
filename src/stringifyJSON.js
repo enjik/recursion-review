@@ -5,8 +5,7 @@
 
 var stringifyJSON = function(obj) { //null, undefined, number, Arrays, objects, strings, bools
   // your code goes here
-  console.log(obj);
-  console.log(typeof(obj));
+
   var dealingWithFunction = false;
   if (typeof(obj) === 'function') {
   
@@ -16,7 +15,7 @@ var stringifyJSON = function(obj) { //null, undefined, number, Arrays, objects, 
   var arrayTemp = "["
     for (var i = 0; i < obj.length; i++) {
         arrayTemp += (stringifyJSON(obj[i]));
-        console.log("recursive");
+
         if (i < obj.length-1 ) {
           arrayTemp += ","
         }
